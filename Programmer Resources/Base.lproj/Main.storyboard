@@ -27,13 +27,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xu-ai-qtc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xu-ai-qtc">
                                         <rect key="frame" x="166.5" y="194" width="42" height="215"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvD-qt-VbA">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvD-qt-VbA">
                                         <rect key="frame" x="166.5" y="388.5" width="42" height="214.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -52,7 +52,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="YCo-JU-LhI" kind="show" id="dVA-YG-LtA"/>
+                        <outlet property="descr" destination="7xu-ai-qtc" id="fKZ-DN-Mu8"/>
+                        <outlet property="name" destination="ygf-GO-S8s" id="YYW-6a-cUk"/>
+                        <outlet property="url" destination="SvD-qt-VbA" id="Vy7-9l-9kV"/>
+                        <segue destination="YCo-JU-LhI" kind="show" identifier="showWebView" id="dVA-YG-LtA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,12 +88,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XAz-E3-pHQ"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="1xA-kz-npS" id="abw-dt-fGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcg-oY-hX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2113" y="134"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Programmer Resources-->
         <scene sceneID="3Lh-Be-u7n">
             <objects>
                 <tableViewController id="dog-6C-jaO" customClass="TableViewController" customModule="Programmer_Resources" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,7 +113,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="3A3-sS-wpI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showDetail" id="3A3-sS-wpI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,7 +122,7 @@
                             <outlet property="delegate" destination="dog-6C-jaO" id="IqJ-Lx-e1Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n85-k1-RtU"/>
+                    <navigationItem key="navigationItem" title="Programmer Resources" id="n85-k1-RtU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNc-Cl-GSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
